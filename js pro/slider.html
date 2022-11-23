@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+        background-color: teal;
+        border: 1px solid brown;
+        font-style: oblique;
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 4px;
+    }
+    .slide img{
+        width: 100%;
+        height: 500px;
+        border-left: 3px solid teal;
+        border-radius: 10px;
+
+    }
+    .slide p{
+        position: relative;
+        text-align: center;
+        padding: 5px;
+        border-radius: 8px;
+        border: 1px solid teal;
+        font-style: oblique;
+        font-family: fantasy;
+        top: -100px;
+        width: 50%;
+        margin: auto;
+        background-color: aliceblue;
+        color: black;
+    }
+    button{
+        position: absolute;
+        border: 1px solid teal;
+        background-color: grey;
+        border-radius: 4px;
+        padding: 10px;
+        color: aqua;
+
+    }
+    .left{
+        top: 300px;
+        left: 15px;
+    }
+    .right{
+        top: 300px;
+        right: 15px;
+    }
+</style>
+<body>
+    <h1>slider</h1>
+    <div class="slides">
+        <div class="slide">
+            <img src="C:\Users\lenovo\Downloads\xxy.jpg" alt="">
+            <p class="pp">IMG 1</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\lenovo\Downloads\xx1.jpg" alt="">
+            <p class="pp">IMG 2</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\lenovo\Downloads\xx2.jpg" alt="">
+            <p class="pp">IMG 3</p>
+        </div>
+        <div class="slide">
+            <img src="C:\Users\lenovo\Downloads\xx3.jpg" alt="">
+            <p class="pp">IMG 4</p>
+        </div>
+    </div>
+    <button class="left" onclick="left()"><<<</button>
+    <button class="right" onclick="right()">>>></button>
+
+    <script>
+        var ind=0;
+        var slides=document.getElementsByClassName("slide");
+        function display()
+        {
+           // ind=(ind+1)%4;
+            var i;
+            for(i=0;i<slides.length;i++)
+            {
+                slides[i].style.display="none";
+            }
+            slides[ind].style.display="block";
+        }
+        function left()
+        {
+            ind=(ind+1)%4;
+            display();
+        }
+        function right()
+        {
+            ind=(ind+1)%4;
+            display();
+        }
+        display()
+       // setInterval(display,1000)
+    </script>
+</body>
+
+</html>

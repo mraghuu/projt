@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        background-color: black;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>console.log events "mouseover" "mouseout" "dblclick"</h3>
+    <h1 id="h1">event class</h1>
+    <input id="i1" type="text" placeholder="enter something">
+     <h3>"w" & "numbers" are not allowed</h3>
+    <script>
+
+      var h1=document.getElementById("h1");
+      h1.addEventListener("click",(e)=>{console.log(e.type)})
+      h1.addEventListener("mouseover",(e)=>{console.log(e.type)})
+      h1.addEventListener("mouseout",(e)=>{console.log(e.type)})
+      h1.addEventListener("dblclick",(e)=>{console.log(e.type)})
+      var i=document.getElementById("i1");
+      i1.addEventListener("keypress",(e)=>{console.log(e.type)})
+      i1.addEventListener("keydown",(e)=>{console.log(e.key)})
+      i1.addEventListener("keyup",(e)=>{
+          var data=i1.value;
+          if(data.indexOf("w")!=-1 || data.match(/\d/))
+          {
+            i1.style.backgroundColor="red"
+            console.log("wrong input")
+          }
+          else{
+            i1.style.backgroundColor="white"
+              console.log("right input")
+          }
+      })
+      //regular expression
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("123.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+
+    
+}
+nav{
+    display: flex;
+    padding: 15px 6%;
+    justify-content: space-around;
+
+
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 16px;
+    position: relative;
+
+}
+.nav-links ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;    
+    cursor: pointer;
+}
+
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    /*background: #0088a9;*/
+    background: teal;
+    display: block;
+    margin: auto;
+    transition: 0.7s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*
+.nav-links ul li{
+    padding: 9px 20px;
+    background-color: #0088a9;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+      transition: all 0.3s ease 0s;
+}
+.nav-links ul li:hover{
+    background-color: white;
+    color: #111010;
+}*/
+
+.text-box{
+    padding: 0 50px;
+    
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    width: 70%;
+    color:teal;
+    position: absolute;
+    margin: auto  ;
+}
+.intext-box{
+    
+    display: grid;align-items: baseline;
+    margin: 35px 60px;
+    
+}
+.dp{
+
+    width: 200px;
+    box-shadow: 5px 5px 20px;
+    height: 250px;
+    border-radius: 0 150px 150px 150px;
+    border: 5px solid teal;
+    filter: grayscale(90%);
+    filter: brightness(90%);
+    
+}
+.dp:hover{
+    border: 5px solid rgb(25, 185, 185);
+    
+    transition: 0.30s all 0.1s ease;
+}
+.text-box h1{
+    margin-top: 20px;
+    font-size: 2.5rem;
+    font-family: 'Kanit', sans-serif;
+    color: white;
+}
+.text-box span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 15rem;
+    color: white;
+    display: inline;
+    background-image: linear-gradient(to right, teal, #474949, transparent);
+    
+}
+.btn{
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    text-decoration: none;
+    color: #fff;
+    border: 0px solid white;
+    padding: 5px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    
+
+}
+/*.btn:hover{
+    border: 0.3px solid #0088a9;
+    
+    transition: 0.30 all 0 ease;
+}*/
+
+/*-------footer-------*/
+.f-links{
+    position: fixed;
+    left: 0;
+    bottom: 5px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+.f-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 5px;
+    position: relative;
+
+}
+.f-links ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;    
+    cursor: pointer;
+}
+
+.sec1{
+    background-color: rgba(181, 190, 196, 0.418);
+    width: 100%;
+    position: absolute;
+    display: inline-block;
+    
+    justify-content: center;
+    align-items: center;
+}
+.div1{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    direction: initial;
+    position: relative;
+    
+}
+.h2:after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    /*background: #0088a9;*/
+    background: teal;
+    display: inline-block;
+    margin: auto;
+    
+}
+
+
+
+/*-----about------*/
+
+
+.about{
+    
+    
+    position: relative;
+    width: 90%;
+    top: 0%;
+    margin: 0 auto;
+}
+.prof{
+    
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    width: 80%;
+    margin: auto;
+
+}
+.prof p{
+    padding-left: 30px;
+    padding-right: 10px;
+}
+
+.abtprof{
+    border: 2px solid blue;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 32px;
+    }
+}

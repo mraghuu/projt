@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .cir {
+      background-color: teal;
+      box-shadow: 2px 0.09px;
+      height: 150px;
+      width: 150px;
+      border-radius: 75px;
+      transition: all, 2s;
+    }
+    .d{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%,-50%);
+    }
+    button,input{
+        border: 1px solid teal;
+        margin: auto;
+    }
+  </style>
+  <body>
+    <div class="d">
+      <div class="cir" id="circle"></div>
+      <input type="number" placeholder="enter the px" id="i1" /><br />
+      <button onclick="left()">left</button>
+      <button onclick="right()">right</button>
+      <button onclick="bottom()">bottom</button>
+      <button onclick="up()">top</button>
+    </div>
+    <script>
+      var x = 0,
+        y = 0;
+
+      function left() {
+        var val = parseInt(document.getElementById("i1").value);
+        var el = document.getElementById("circle");
+        x = x - val;
+        el.style.transform = `translateX(${x}px)`;
+      }
+      function right() {
+        var val = parseInt(document.getElementById("i1").value);
+        var el = document.getElementById("circle");
+        x = x + val;
+        el.style.transform = `translateX(${x}px)`;
+      }
+      function bottom() {
+        var val = parseInt(document.getElementById("i1").value);
+        var el = document.getElementById("circle");
+        y = y + val;
+        el.style.transform = `translateY(${y}px)`;
+      }
+      function up() {
+        var val = parseInt(document.getElementById("i1").value);
+        var el = document.getElementById("circle");
+        y = y - val;
+        el.style.transform = `translateY(${y}px)`;
+      }
+    </script>
+  </body>
+</html>
